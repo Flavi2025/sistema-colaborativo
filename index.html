@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -26,29 +27,46 @@
       align-items: center;
       color: white;
       text-align: center;
+      padding: 20px;
+    }
+
+    .menu-toggle {
+      display: none;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: rgba(0, 0, 0, 0.4);
+      border: none;
+      color: white;
+      font-size: 24px;
+      padding: 10px;
+      border-radius: 5px;
+      z-index: 1000;
     }
 
     nav {
       position: absolute;
-      top: 30px;
-      right: 50px;
+      top: 20px;
+      right: 20px;
     }
 
     nav ul {
       list-style: none;
       display: flex;
-      gap: 20px;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
     nav a {
       text-decoration: none;
       color: white;
       font-weight: bold;
-      font-size: 16px;
-      padding: 8px 12px;
+      font-size: 14px;
+      padding: 6px 10px;
       background: rgba(0, 0, 0, 0.3);
       border-radius: 5px;
       transition: background 0.3s;
+      white-space: nowrap;
     }
 
     nav a:hover {
@@ -56,19 +74,19 @@
     }
 
     h1 {
-      font-size: 3rem;
+      font-size: 2.5rem;
       background-color: rgba(0, 0, 0, 0.4);
-      padding: 10px 20px;
+      padding: 10px 15px;
       border-radius: 10px;
     }
 
     main {
-      padding: 50px;
+      padding: 50px 20px;
       text-align: center;
     }
 
     section {
-      padding: 40px;
+      padding: 40px 20px;
       margin-bottom: 30px;
       border-radius: 15px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -96,19 +114,19 @@
     }
 
     #quemsomos h2::before {
-      content: "\1F465"; /* 👥 */
+      content: "\1F465";
     }
 
     #sistema h2::before {
-      content: "\1F310"; /* 🌐 */
+      content: "\1F310";
     }
 
     #como h2::before {
-      content: "\2699"; /* ⚙ */
+      content: "\2699";
     }
 
     #cadastro h2::before {
-      content: "\270D"; /* ✍ */
+      content: "\270D";
     }
 
     footer {
@@ -117,10 +135,52 @@
       background-color: #333;
       color: white;
     }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        position: static;
+        display: none;
+        margin-top: 20px;
+      }
+
+      nav.active {
+        display: block;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav a {
+        font-size: 16px;
+        padding: 10px 16px;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+        padding: 10px;
+      }
+
+      header {
+        padding-top: 80px;
+      }
+    }
   </style>
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector('nav');
+      nav.classList.toggle('active');
+    }
+  </script>
 </head>
 <body>
   <header>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     <nav>
       <ul>
         <li><a href="#quemsomos">Quem somos</a></li>
