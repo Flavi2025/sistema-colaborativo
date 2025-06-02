@@ -5,72 +5,158 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sistema Colaborativo Internacional</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    * {
       margin: 0;
       padding: 0;
-      background: #f0f8ff;
-      color: #333;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
+
+    body {
+      background-color: #f0f0f0;
+    }
+
     header {
-      background: #0077cc;
+      background: url('/8366.jpg') center center / cover no-repeat;
+      height: 100vh;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       color: white;
-      padding: 20px;
       text-align: center;
     }
-    section {
-      padding: 40px 20px;
-      max-width: 800px;
-      margin: auto;
+
+    nav {
+      position: absolute;
+      top: 30px;
+      right: 50px;
     }
-    h2 {
-      color: #0077cc;
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
     }
-    .button {
-      display: inline-block;
-      padding: 12px 24px;
-      margin-top: 20px;
-      background-color: #0077cc;
-      color: white;
+
+    nav a {
       text-decoration: none;
-      border-radius: 8px;
+      color: white;
       font-weight: bold;
+      font-size: 16px;
+      padding: 8px 12px;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 5px;
+      transition: background 0.3s;
     }
-    footer {
-      background: #e0e0e0;
+
+    nav a:hover {
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    h1 {
+      font-size: 3rem;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+
+    main {
+      padding: 50px;
       text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
+    }
+
+    section {
+      padding: 40px;
+      margin-bottom: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    #quemsomos {
+      background-color: #e3f2fd;
+    }
+
+    #sistema {
+      background-color: #e8f5e9;
+    }
+
+    #como {
+      background-color: #fff3e0;
+    }
+
+    #cadastro {
+      background-color: #fce4ec;
+    }
+
+    h2::before {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    #quemsomos h2::before {
+      content: "\1F465"; /* 👥 */
+    }
+
+    #sistema h2::before {
+      content: "\1F310"; /* 🌐 */
+    }
+
+    #como h2::before {
+      content: "\2699"; /* ⚙ */
+    }
+
+    #cadastro h2::before {
+      content: "\270D"; /* ✍ */
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background-color: #333;
+      color: white;
     }
   </style>
 </head>
 <body>
   <header>
+    <nav>
+      <ul>
+        <li><a href="#quemsomos">Quem somos</a></li>
+        <li><a href="#sistema">Sistema Colaborativo</a></li>
+        <li><a href="#como">Como funciona</a></li>
+        <li><a href="#cadastro">Cadastra-se</a></li>
+        <li><a href="https://chat.whatsapp.com/F3d2vljseazKr1fjkcB9Ix" target="_blank">WhatsApp</a></li>
+      </ul>
+    </nav>
     <h1>Sistema Colaborativo Internacional</h1>
-    <p>Uma comunidade de ajuda mútua descentralizada e ética</p>
   </header>
 
-  <section>
-    <h2>Como Funciona?</h2>
-    <p>Você entra na comunidade realizando uma doação direta para outro participante. Depois, convida duas pessoas para fazer o mesmo. Conforme essas pessoas doam, você avança na estrutura, podendo receber apoio de outros. Simples, justo e colaborativo.</p>
-    <a href="#comparativo" class="button">Ver Comparativo</a>
-  </section>
+  <main>
+    <section id="quemsomos">
+      <h2>Quem somos</h2>
+      <p>Somos uma comunidade internacional de voluntários que se une para ajudar pessoas ao redor do mundo por meio da ajuda mútua. Estamos presente em mais de 60 países e hoje somos mais de 20 mil pessoas distribuindo doações para quem mais precisa. Como somos uma comunidade descentralizada, não temos nenhum dono e nenhuma conta que centraliza as doações, toda ajuda é distribuída de pessoa para a pessoa, de forma transparente e sustentável. Acreditamos na filosofia Ubuntu e entendemos que "Eu sou porque nós somos".</p>
+    </section>
 
-  <section>
-    <h2>Ajuda Mútua vs. Pirâmide Financeira</h2>
-    <p><strong>Ajuda Mútua:</strong> descentralizada, transparente, doador para doador, sem promessas financeiras.</p>
-    <p><strong>Pirâmide:</strong> centraliza dinheiro, tem donos, e alto risco de prejuízo.</p>
-    <a href="comparativo_ajuda_mutua_vs_piramide_colorido.pdf" class="button">Baixar PDF</a>
-  </section>
+    <section id="sistema">
+      <h2>Sistema Colaborativo</h2>
+      <p>Nosso sistema colaborativo conecta pessoas em qualquer lugar do mundo. Tanto as que precisam receber doações e as podem ajudar no mesmo propósito solidário, tornando a economia colaborativa compartilhada entre todos para transformar vidas por meio das doações descentralizadas.</p>
+    </section>
 
-  <section>
-    <h2>Quero Participar</h2>
-    <p>Pronto para fazer parte de uma comunidade ética e colaborativa?</p>
-    <a href="https://chat.whatsapp.com/F3d2vljseazKr1fjkcB9Ix" class="button">Entrar no WhatsApp</a>
-  </section>
+    <section id="como">
+      <h2>Como funciona</h2>
+      <p>O sistema é muito simples e altamente recompensador. Cada novo doador fará uma doação única, espontânea e voluntária de 15 dólares para ajudar uma família e convidará quatro amigos da sua confiança para fazer o mesmo. Essa ação solidária entre amigos fortalece a comunidade que tem uma fila orientada por um algoritmo inteligente que distribui as doações entre eles. O pouco, de mão em mão dentro do sistema colaborativo, gera uma recompensa extraordinária e promove um impacto real para mudar vidas. E todos nós trabalhamos diariamente esta conscientização, levando a mensagem de esperança para todas as pessoas que hoje precisam de uma ajuda para viver com mais qualidade de vida com sua família.</p>
+    </section>
+
+    <section id="cadastro">
+      <h2>Cadastra-se</h2>
+      <p>Somente por meio de um convite cada novo doador poderá fazer parte do nosso Sistema Colaborativo. O cadastro no site é simplificado para apenas nome e e-mail e cada novo membro terá um login e senha para acompanhar o andamento da fila de doações. O seu link de convite será enviado pelo WhatsApp assim que recebermos sua mensagem no grupo confirmando sua adesão a comunidade. Entre em contato somente se tiver interesse em participar.</p>
+    </section>
+  </main>
 
   <footer>
-    <p>Esta é uma rede de doações voluntárias entre pessoas. Não há promessa de retorno financeiro. © 2025 Sistema Colaborativo Internacional</p>
+    <p>Sistema Colaborativo Internacional - 2025</p>
   </footer>
 </body>
 </html>
